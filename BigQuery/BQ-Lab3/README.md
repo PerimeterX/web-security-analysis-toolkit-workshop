@@ -12,8 +12,9 @@ This data set also includes an "is_bad" column that you can use as a reference
 * Compare to is_bad field (how?)
 
 
+# Sample code
 
-
+Examples for different percentile searches
 
 -- 99 precentile of IP per minute doing a login
 ```sql
