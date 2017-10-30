@@ -14,7 +14,12 @@
 * Open notebook
 * Create a new notebook, name it oreillysec17
 ```python
-# Exectue the following command:
+import google.datalab.bigquery as bq
+```
+click the run button on the top
+
+add the following command next (it is important that the %%bq command will be first) and run it
+```python
 %%bq query
-SELECT timestamp, activity FROM `oreilly-securit-ny-2017.bqlabs.lab1_data` LIMIT 1000
+SELECT timestamp, remote_ip FROM `oreilly-securit-ny-2017.bqlabs.lab2_data` LIMIT 1000
 ```
