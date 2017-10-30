@@ -1,0 +1,8 @@
+alert:
+  - "slack"
+  - "opsgenie"
+
+slack_webhook_url:
+  - "https://hooks.slack.com/services/[your-channel-here]"
+
+opsgenie_key: "[your-key-here]"

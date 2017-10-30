@@ -1,0 +1,22 @@
+name: Login spike
+
+import:
+  - sources/daily-activities
+  - alerters/opsslack-and-opsgenie
+
+filter:
+  - query:
+      query_string:
+        query: 'req_tags:*login\_attempt* AND http_method:"GET" AND NOT filter_type:whitelist'
+
+type: spike
+timeframe:
+  minutes: 5
+spike_height: 2
+spike_type: up
+threshold_ref: 150
+threshold_cur: 550
+
+alert_text: "Spike in login acctivity, {0}, on path {2}"
+alert_text_type: alert_text_only
+alert_text_args: ["@timestamp","path"]
