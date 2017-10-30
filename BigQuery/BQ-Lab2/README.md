@@ -5,7 +5,7 @@ SELECT
   remote_ip,
   COUNT(*) as cnt
 FROM
-  [oreilly-securit-ny-2017:wbeserver_logs.access_sample]
+  [oreilly-securit-ny-2017:bqlabs.lab2_data]
 GROUP BY
   remote_ip
 HAVING
@@ -17,7 +17,7 @@ HAVING
       remote_ip,
       COUNT(*) cnt_per_req
     FROM
-      [oreilly-securit-ny-2017:wbeserver_logs.access_sample]
+      [oreilly-securit-ny-2017:bqlabs.lab2_data]
     GROUP BY
       remote_ip ) ) * 2.5
 ORDER BY
